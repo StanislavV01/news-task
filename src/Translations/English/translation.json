@@ -1,0 +1,13 @@
+{
+ 
+    "hignt-mode":"night mode",
+
+        "home": "Home",
+        "profile":"Profile",
+        "login":"Login",
+        "logout":"Logout",
+        "news":"News",
+        "load-more" : "Load More",
+        "read-more":"Read More",
+        "language":"Language"
+}
