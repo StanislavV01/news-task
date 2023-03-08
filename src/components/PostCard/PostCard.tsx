@@ -14,13 +14,16 @@ const PostCard: FC<IPostProps> = ({post, loading}): JSX.Element =>{
   const {title, body} = post;
 
   return  <Grid item xs={2} sm={4} md={4} key={post.id}>
-     <CardContent sx={{background:"#fff", maxHeight:270, display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+     <CardContent sx={{background:"#fff",  display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
       <Typography  color="primary"  variant='h3'>
-        {loading ? <Skeleton variant="text" sx={{ fontSize: '1rem' }} /> : title}
-      </Typography>
+        {loading && <Skeleton variant="text" sx={{ fontSize: '1rem' }} />}
+     
+ 
+             </Typography>
 
       <Typography variant="h6">
-          {loading ? <Skeleton variant="rectangular" width={210} height={60} /> : body}
+          {loading && <Skeleton variant="rectangular" width={210} height={60} /> }
+          { body ? `${body.slice(0, 120)}...` :' No description'}
         <br />
         {'"a benevolent smile"'}
       </Typography>

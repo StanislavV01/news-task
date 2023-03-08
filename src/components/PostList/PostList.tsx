@@ -20,7 +20,7 @@ const {loading,data, error} = useAppSelector(state=>state.posts)
 
   return (
     <Box display={'flex'} flexDirection='column'>
-    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 2, sm: 8, md: 12 }}>
         {   
             error ? <ErrorMessage message="Something went wrong!Please try again"/> :
             data?.map(post=><PostCard post={post} key={post.id}  loading={loading}/>)
